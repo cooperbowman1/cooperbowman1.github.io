@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cooper Bowman</title>
+    <style>
+        /* Reuse your existing styles */
+        body {
+            margin: 0;
+            font-size: 24px;
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: black;
+            color: #FAF9F6;
+        }
+
+		/* Header Styles */
+		header {
+		    width: 100%; /* Make the header stretch across the full screen */
+		    padding: 20px 0; /* Add some padding to the top and bottom of the header */
+		}
+		
+		/* Header Styles */
+		header h1 {
+			font-family: 'Helvetica Light', sans-serif;
+		    font-size: 90px; /* Large font size for your name */
+			letter-spacing: -5px;
+			font-weight: 500;
+		    margin: 0;
+			margin-left: 15px;
+			text-align: left; /* Ensure text is left-aligned */
+		}
+		
+		header h1 .subtext {
+			font-family: 'Helvetica Regular', sans-serif;
+		    display: block; /* Ensures the subtext is on a new line */
+		    font-size: 24px; /* Smaller font size for the subtext */
+			color: #FF5F1F;
+			letter-spacing: +.5px;
+		    font-weight: normal; /* Lighter weight for contrast */
+		    margin-top: -50px; /* Spacing between header and subtext */
+			margin-left: +5px;
+		}
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+        .right-column {
+            flex: 1;
+            padding-left: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 150px 0 0;
+        }
+
+        nav ul li {
+            font-size: 30px;
+            letter-spacing: -.5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        nav a {
+            position: relative;
+            color: #FAF9F6;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ff6c2f !important;
+            text-decoration: underline;
+        }
+
+        /* About page specific styles */
+        .about-content {
+            display: flex;
+            gap: 40px;
+            margin-top: 50px;
+            align-items: flex-start;
+        }
+
+.profile-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    align-items: flex-start;
+    height: 500px; /* Match the image height */
+}
+
+.about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the text */
+}
+
+.about-text p {
+    font-size: 21px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+	margin-top: 0px;
+}
+
+        /* Dropdown Styles */
+        .main-nav { 
+            list-style: none; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        .main-nav > li { 
+            position: relative; 
+            margin: 0 0 0.5rem 0; 
+        }
+
+        .dropdown > .dropdown-toggle { 
+            cursor: pointer; 
+        }
+
+        .dropdown-menu {
+            display: none;
+            list-style: none;
+            margin: 0.25rem 0 0 1rem;
+            padding: 0;
+            position: static;
+            background: transparent;
+            border: 0;
+        }
+
+        .dropdown-menu li { 
+            margin: 0 0 0.25rem 0; 
+        }
+
+        .dropdown-menu a {
+            display: block;
+            font-size: 21px;
+            line-height: 1.5;
+        }
+
+        /* Show submenu on hover (desktop) */
+        .dropdown:hover > .dropdown-menu { 
+            display: block; 
+        }
+		
+    </style>
+</head>
+<body>
+    <header>
+        <h1>COOPER BOWMAN</h1> 
+    </header>
+    
+    <header>
+        <h1>
+            <span class="subtext">SINCE 2022</span>
+        </h1>
+    </header>
+    
+    <div class="container">
+        <div class="left-column">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">PORTFOLIO</a></li>
+                    <li><a href="about.html" style="color: #ff6c2f;" >ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="right-column">
+            <div class="about-content">
+                <img src="H:\My Drive\2025\2025 ART\2025 WEBSITE\images\PORTRAIT.jpg" alt="Cooper Bowman" class="profile-image">
+                
+                <div class="about-text">
+                    <p>Cooper Bowman is a multidisciplinary designer specializing in graphic design, monument design, and illustration. With a keen eye for detail and a passion for creating meaningful visual experiences, Cooper brings concepts to life through thoughtful design solutions.</p>
+                    
+                    <p>Since beginning his professional journey in 2022, Cooper has developed a distinctive style that blends modern aesthetics with timeless principles. His work spans various mediums, from digital graphics to physical installations, always with a focus on clarity, purpose, and visual impact.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/portfoliowebsitestyles.css"> <!-- Link to your CSS file -->
+	<style>
+        /* Default link style: white text, no underline */
+        nav a {
+  			position: relative;
+  			color: #FAF9F6;                  /* always white text */
+  			text-decoration: none;
+        }
+
+        /* Hover effect: orange text with underline */
+nav a:hover { text-decoration: underline; }
+		
+		.BOOPCOLLECTIVE-LOGO {
+    display: inline-block;
+}
+
+.logo-svg {
+    width: 300px; /* Adjust to your logo size */
+    height: auto;
+}
+
+.BOOPCOLLECTIVE-LOGO a:hover .logo-svg {
+    filter: invert(54%) sepia(90%) saturate(1500%) hue-rotate(0deg) brightness(100%) contrast(105%);
+}
+		
+    </style>
+</head>
+<body>
+    <header>
+        <h1>COOPER BOWMAN</h1> 
+        <!-- Replace "Your Name" with your actual name -->
+    </header>
+	
+	<header>
+    <h1>
+        <span class="subtext">SINCE 2022</span>
+    </h1>
+		
+<div class="BOOPCOLLECTIVE-LOGO">
+    <a href="https://www.etsy.com/shop/boopcollective" target="_blank">
+        <img src="logo/BOOPCOLLECTIVE_LOGO.svg" alt="BOOPCOLLECTIVE LOGO" class="logo-svg">
+    </a>		
+	</div>
+		
+</header>
+	
+    <div class="container">
+        <div class="left-column">
+<nav>
+  <ul class="main-nav">
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">PORTFOLIO</a>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="graphic-design.html">Graphic Design</a></li>
+    <li><a href="monument-design.html">Monument Design</a></li>
+    <li><a href="stickers.html">Stickers</a></li>
+  </ul>
+</li>
+<li><a href="about.html">ABOUT</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+  </ul>
+</nav>
+        </div>
+        <div class="right-column">
+            <div class="image-tiles">
+                <!-- Example images -->
+                <img src="images/image1.jpg" alt="PLAYBOI CARTI COLLAGE" class="tile-image">
+                <img src="images/image2.jpg" alt="KOBE BRYANT COLLAGE" class="tile-image">
+                <img src="images/image3.jpg" alt="D-ROSE COLLAGE" class="tile-image">
+				<img src="images/image4.jpg" alt="KD X WIZ KHALIFA COLLAGE" class="tile-image">
+                <img src="images/image5.jpg" alt="XAVIER WULF COLLAGE" class="tile-image">
+                <img src="images/image6.jpg" alt="THE GAME COLLAGE" class="tile-image">
+				<img src="images/image7.jpg" alt="KID CUDI COLLAGE" class="tile-image">
+				<img src="images/image8.jpg" alt="CHUCK STRANGERS COLLAGE" class="tile-image">
+				<img src="images/image9.jpg" alt="BLADEE COLLAGE" class="tile-image">
+				<img src="images/image10.jpg" alt="GTA V COLLAGE" class="tile-image">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+    </div>
+	
+	<div class="COOPER-BOWMAN-LOGO">
+    <img src="logo\COOPERBOWMAN_LOGO.svg" alt="COOPER BOWMAN LOGO">
+	</div>
+	
+	<div class="social-container">
+    <a href="https://www.instagram.com/cooperbowmandesign/" target="_blank">
+        <img src="images/INSTAGRAM logo.svg" alt="Instagram" class="social-icon">
+    </a>
+    <a href="https://x.com/cooperbowman_" target="_blank">
+        <img src="images/X logo.svg" alt="Twitter" class="social-icon">
+    </a>
+    <a href="https://www.behance.net/cooperbowman_" target="_blank">
+        <img src="images/Behance logo.svg" alt="Behance" class="social-icon">
+    </a>
+</div>
+	<div id="image-modal" class="modal">
+        <img id="modal-image" src="" alt="Full-Screen Image">
+</div>
+</body>
+<script>
+// --- Modal zoom code ---
+const modal = document.getElementById('image-modal');
+const modalImage = document.getElementById('modal-image');
+
+document.querySelectorAll('.tile-image').forEach(image => {
+  image.addEventListener('click', () => {
+    modal.style.display = 'flex'; 
+    modalImage.src = image.src;
+    modalImage.classList.add('zoomable');
+  });
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) modal.style.display = 'none';
+});
+
+let isZoomEnabled = false;
+modalImage.addEventListener('click', () => {
+  isZoomEnabled = !isZoomEnabled;
+  modalImage.style.transform = isZoomEnabled ? 'scale(2)' : 'scale(1)';
+  if (!isZoomEnabled) modalImage.style.transformOrigin = 'center center';
+});
+
+modalImage.addEventListener('mousemove', (e) => {
+  if (!isZoomEnabled) return;
+  const r = modalImage.getBoundingClientRect();
+  const xPercent = ((e.clientX - r.left) / r.width) * 100;
+  const yPercent = ((e.clientY - r.top) / r.height) * 100;
+  modalImage.style.transform = 'scale(2)';
+  modalImage.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+});
+
+modalImage.addEventListener('mouseleave', () => {
+  if (isZoomEnabled) {
+    modalImage.style.transform = 'scale(1)';
+    modalImage.style.transformOrigin = 'center center';
+  }
+});
+
+</script>
+</html>
+
+
