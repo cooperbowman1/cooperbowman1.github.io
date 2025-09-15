@@ -106,6 +106,35 @@ nav a:hover { text-decoration: underline; }
 	<div id="image-modal" class="modal">
         <img id="modal-image" src="" alt="Full-Screen Image">
 </div>
+	<script>
+// --- Image randomization code ---
+document.addEventListener('DOMContentLoaded', function() {
+    const imageTilesContainer = document.querySelector('.image-tiles');
+    const images = Array.from(imageTilesContainer.querySelectorAll('.tile-image'));
+    
+    // Function to shuffle array (Fisher-Yates algorithm)
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+    
+    // Shuffle the images array
+    const shuffledImages = shuffleArray(images);
+    
+    // Remove all existing images
+    while (imageTilesContainer.firstChild) {
+        imageTilesContainer.removeChild(imageTilesContainer.firstChild);
+    }
+    
+    // Append the shuffled images
+    shuffledImages.forEach(img => {
+        imageTilesContainer.appendChild(img);
+    });
+});
+</script>
 </body>
 <script>
 // --- Modal zoom code ---
