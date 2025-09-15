@@ -264,3 +264,143 @@ nav a:hover {
     color: #FF5F1F !important;
     text-decoration: underline;
 }
+
+
+/* MOBILE INTEGRATION */
+/* MOBILE INTEGRATION */
+/* MOBILE INTEGRATION */
+
+/* Mobile integration - ALL styles inside media queries */
+@media (max-width: 991px) {
+	
+	    .image-tiles {
+		margin-top: -100px;	
+        margin-right: 0;
+        margin-left: -90px;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    /* Ensure consistent image aspect ratios */
+    .tile-image {
+        height: 300px; /* Adjust as needed */
+        object-fit: cover;
+        width: 100%;
+    }
+	
+	    /* Mobile header styles */
+    header h1 {
+        font-size: 54px; /* Smaller size for mobile */
+        letter-spacing: -5px; /* Adjust letter spacing if needed */
+        margin-left: 0; /* Remove left margin for centered alignment */
+		margin-top: 50px;
+        text-align: center; /* Center align for mobile */
+    }
+    
+    header h1 .subtext {
+        font-size: 30px; /* Smaller subtext size */
+        margin-top: -100px; /* Adjust spacing for smaller header */
+		margin-bottom: -25px;
+        margin-left: 35px; /* Remove left margin */
+		text-align: left;
+    }
+    
+    /* Adjust BOOPCOLLECTIVE logo for mobile */
+    .BOOPCOLLECTIVE-LOGO {
+        position: static; /* Change from fixed positioning */
+        top: 0;
+        right: 0;
+        margin: -50px auto; /* Center with margin */
+		margin-left: 90px;
+        text-align: center;
+    }
+	
+    /* Base styles - for mobile devices */
+    body {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* Mobile navigation */
+    .main-nav {
+        flex-direction: column;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    /* Hamburger menu for mobile */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    
+    nav ul {
+        display: none;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    /* Mobile image grid */
+    .image-tiles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    /* Ensure proper sizing */
+    * {
+        box-sizing: border-box;
+    }
+    
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Improve touch targets for mobile */
+    nav a {
+        padding: 12px 8px;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-tiles {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+/* Add shadow to social icons */
+.social-container {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.75)); /* Black with 75% opacity */
+}
+
+.social-icon {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.75)); /* Black with 75% opacity */
+}
+
+/* Add shadow to personal logo */
+.COOPER-BOWMAN-LOGO {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.75)); /* Black with 75% opacity */
+}
