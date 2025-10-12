@@ -1,0 +1,514 @@
+
+/* DESKTOP STYLES */
+/* DESKTOP STYLES */
+/* DESKTOP STYLES */
+body {
+    margin: 0;
+	font-size: 24px;
+    font-family: Helvetica, Arial, sans-serif; /* Helvetica font */
+    background-color: black; /* Black background */
+    color: #FAF9F6; /* White text */
+}
+
+/* Header Styles */
+header {
+    width: 100%; /* Make the header stretch across the full screen */
+    padding: 20px 0; /* Add some padding to the top and bottom of the header */
+}
+
+/* Header Styles */
+header h1 {
+	font-family: 'Helvetica Light', sans-serif;
+    font-size: 90px; /* Large font size for your name */
+	letter-spacing: -5px;
+	font-weight: 500;
+    margin: 0;
+	margin-left: 15px;
+	text-align: left; /* Ensure text is left-aligned */
+}
+
+header h1 .subtext {
+	font-family: 'Helvetica Regular', sans-serif;
+	color: #FF5F1F;
+    display: block; /* Ensures the subtext is on a new line */
+    font-size: 24px; /* Smaller font size for the subtext */
+	letter-spacing: +.5px;
+    font-weight: normal; /* Lighter weight for contrast */
+    margin-top: -50px; /* Spacing between header and subtext */
+	margin-left: +5px;
+}
+
+.COOPER-BOWMAN-LOGO {
+    position: fixed;
+    bottom: 75px;
+    left: 30px;
+    z-index: 100;
+}
+
+.COOPER-BOWMAN-LOGO img {
+    height: 125px;
+    width: auto;
+}
+
+.BOOPCOLLECTIVE-LOGO {
+    position: fixed;
+    top: -60px;
+    right: 50px;
+    z-index: 100;
+}
+
+.BOOPCOLLECTIVE-LOGO img {
+    height: 300px;
+    width: auto;
+}
+
+/* Container for content */
+.container {
+    display: flex; /* Creates a flexbox container for two columns */
+    justify-content: flex-start; /* Aligns content to the left */
+    padding: 20px;
+}
+
+/* Left Column (Navigation) */
+.left-column {
+    flex: 0 0 15%; /* Make it 20% of the total width */
+    display: flex;
+    margin-top: -135px;	
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 20px; /* Space between left column and right column */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 150px 0 0; /* Add spacing between the name and the list */
+}
+
+nav ul li {
+    font-size: 30px; /* Font size for portfolio categories */
+	letter-spacing: -.5px;
+    margin-bottom: 10px; /* Add space between list items */
+    cursor: pointer; /* Pointer cursor for interactivity */
+	text-decoration: none;
+}
+
+nav ul li:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Prevent visited links from being purple */
+nav a:visited {
+    color: #FAF9F6;
+}
+
+/* Right Column (Image Grid) */
+.right-column {
+    flex: 2; /* Takes up 2 parts of the space, more than the left column */
+    padding-left: 20px; /* Space between right column and left column */
+    width: 100%;
+}
+
+/* Image Tile Container */
+.image-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Space between images */
+    margin-right: 60px;
+	margin-left: -40px;
+    margin-top: 7.5px; /* Space from navigation */
+	align-items: start; /* This ensures consistent alignment */
+}
+
+/* Style for each image tile */
+.tile-image {
+    width: 100%;
+    height: 450px; /* Increased size to match the minmax width */
+    object-fit: cover;
+    object-position: center top; /* Adjust this for each image as needed */
+    border-radius: 7.5px; /* Rounded corners */
+    transition: border-radius 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.tile-image:hover {
+    transform: scale(1.05); /* Zooms in the image */
+    cursor: pointer; /* Changes cursor to zoom-in when hovering */
+	border-radius: 0px;
+}
+
+/* Social Media Container */
+.social-container {
+    position: fixed; /* Fixes the icons at the bottom left of the viewport */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    left: 20px; /* Distance from the left of the screen */
+    display: flex; /* Aligns the icons horizontally */
+    gap: 20px; /* Space between each icon */
+    z-index: 1000; /* Ensures the icons are above other elements */
+}
+
+/* Social Media Icons */
+.social-icon {
+    width: 35px;
+    height: 35px;
+    fill: #FFFDD0; /* Default color */
+	color: #FFFDD0;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dimmed background */
+    z-index: 2000; /* Above all other elements */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.modal img {
+    max-width: 90%; /* Limit the width of the image to 90% of the viewport */
+    max-height: 90%; /* Limit the height of the image to 90% of the viewport */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+}
+
+.modal img.zoomable {
+	cursor: zoom-in;
+}
+
+.modal img.mousemove {
+	cursor: zoom-in;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+/* Close Button (Optional) */
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Sidebar position: don't overlap the header */
+.left-column {
+  position: relative;   /* important for dropdown positioning */
+  margin-top: 0;        /* stop pulling the nav up into the header */
+}
+
+/* Make hover only affect links, not all li elements */
+nav ul li { text-decoration: none; color: inherit; }
+nav a { color: white; text-decoration: none; }
+nav a:hover { color: white; text-decoration: underline; }
+
+/* Replace absolute dropdown with a simple push-down submenu for a sidebar */
+.main-nav { list-style: none; margin: 0; padding: 0; }
+.main-nav > li { position: relative; margin: 0 0 0.5rem 0; }
+
+.dropdown > .dropdown-toggle { cursor: pointer; }
+
+/* Submenu appears beneath and pushes content down */
+.dropdown-menu {
+  display: none;
+  list-style: none;
+  margin: 0.25rem 0 0 1rem;   /* indent */
+  padding: 0;
+  position: static;           /* <-- key change; no overlay problems */
+  background: transparent;
+  border: 0;
+}
+.dropdown-menu li { margin: 0 0 0.25rem 0; }
+.dropdown-menu a {
+  display: block;
+  font-size: 24px;   /* adjust as needed */
+  line-height: 1.3;
+  letter-spacing: -1.2px;
+}
+
+/* Show submenu on hover (desktop) */
+.dropdown:hover > .dropdown-menu { display: block; }
+
+/* Defaults for links */
+nav a {
+  position: relative;
+  color: #FAF9F6;
+  text-decoration: none;
+}
+
+nav a:hover {
+    color: #FF5F1F !important;
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 40px;
+    font-size: 18px;
+    color: #FAF9F6;
+    border-top: 2px solid #333;
+	letter-spacing: -0.25px
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Project Section Layout */
+.rodeo-right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 120px; /* Add right padding to the entire column */
+}
+
+
+.project-section {
+    margin-bottom: 80px;
+    width: 100%;
+    display: grid;
+	max-width: 1200px;
+    grid-template-columns: 1fr 2fr; /* Creates two columns - left for description, right for images */
+    gap: 40px; /* Space between columns */
+    align-items: start; /* Align items at the top */
+	padding-right: 250px;
+}
+
+/* Main image styling */
+.main-image {
+    width: 100%;
+    margin-bottom: 30px;
+    grid-column: 2; /* Place in right column */
+	padding-right: 120px;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    max-height: 120vh;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.main-image img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* Detail grid styling */
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+    grid-column: 2; /* Place in right column */
+	padding-right: 0px;
+}
+
+.detail-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.detail-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Project description styling - moved to left */
+.project-description {
+    grid-column: 1; /* Place in left column */
+    grid-row: 1 / span 2; /* Span both rows (main image and detail grid) */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    position: sticky;
+    top: 20px; /* Sticky positioning to stay visible when scrolling */
+}
+
+.project-description h3 {
+    color: #FF5F1F;
+    margin-top: 0;
+	margin-bottom: -10px;
+    font-size: 30px;
+}
+
+.project-description p {
+    line-height: 1.6;
+}
+
+
+
+/* MOBILE INTEGRATION */
+/* MOBILE INTEGRATION */
+/* MOBILE INTEGRATION */
+
+/* Mobile integration - ALL styles inside media queries */
+@media (max-width: 991px) {
+	
+	    .image-tiles {
+		margin-top: -100px;	
+        margin-right: 0;
+        margin-left: -90px;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    /* Ensure consistent image aspect ratios */
+    .tile-image {
+        height: 300px; /* Adjust as needed */
+        object-fit: cover;
+        width: 100%;
+    }
+	
+	    /* Mobile header styles */
+    header h1 {
+        font-size: 54px; /* Smaller size for mobile */
+        letter-spacing: -5px; /* Adjust letter spacing if needed */
+        margin-left: 0; /* Remove left margin for centered alignment */
+		margin-top: 50px;
+        text-align: center; /* Center align for mobile */
+    }
+    
+    header h1 .subtext {
+        font-size: 30px; /* Smaller subtext size */
+        margin-top: -100px; /* Adjust spacing for smaller header */
+		margin-bottom: -25px;
+        margin-left: 35px; /* Remove left margin */
+		text-align: left;
+    }
+    
+    /* Adjust BOOPCOLLECTIVE logo for mobile */
+    .BOOPCOLLECTIVE-LOGO {
+        position: static; /* Change from fixed positioning */
+        top: 0;
+        right: 0;
+        margin: -50px auto; /* Center with margin */
+		margin-left: 90px;
+        text-align: center;
+    }
+	
+    /* Base styles - for mobile devices */
+    body {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    /* Mobile navigation */
+    .main-nav {
+        flex-direction: column;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
+    /* Hamburger menu for mobile */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    
+    nav ul {
+        display: none;
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    /* Mobile image grid */
+    .image-tiles {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    /* Ensure proper sizing */
+    * {
+        box-sizing: border-box;
+    }
+    
+    /* Make images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Improve touch targets for mobile */
+    nav a {
+        padding: 12px 8px;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-tiles {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 750px;
+        margin: 0 auto;
+    }
+}
+
+/* Add shadow to social icons */
+.social-container {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.75)); /* Black with 75% opacity */
+}
+
+.social-icon {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.75)); /* Black with 75% opacity */
+}
+
+/* Add shadow to personal logo */
+.COOPER-BOWMAN-LOGO {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.75)); /* Black with 75% opacity */
+}
+
+
+

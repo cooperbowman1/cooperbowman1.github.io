@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        /* Reuse your existing styles */
+        body {
+            margin: 0;
+            font-size: 24px;
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: black;
+            color: #FAF9F6;
+        }
+
+		/* Header Styles */
+		header {
+		    width: 100%; /* Make the header stretch across the full screen */
+		    padding: 20px 0; /* Add some padding to the top and bottom of the header */
+		}
+		
+		/* Header Styles */
+		header h1 {
+			font-family: 'Helvetica Light', sans-serif;
+		    font-size: 90px; /* Large font size for your name */
+			letter-spacing: -5px;
+			font-weight: 500;
+		    margin: 0;
+			margin-left: 15px;
+			text-align: left; /* Ensure text is left-aligned */
+		}
+		
+		header h1 .subtext {
+			font-family: 'Helvetica Regular', sans-serif;
+		    display: block; /* Ensures the subtext is on a new line */
+		    font-size: 24px; /* Smaller font size for the subtext */
+			color: #FF5F1F;
+			letter-spacing: +.5px;
+		    font-weight: normal; /* Lighter weight for contrast */
+		    margin-top: -50px; /* Spacing between header and subtext */
+			margin-left: +5px;
+		}
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+        .right-column {
+            flex: 1;
+			display: flex;
+            padding-left: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 150px 0 0;
+        }
+
+        nav ul li {
+            font-size: 30px;
+            letter-spacing: -.5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        nav a {
+            position: relative;
+            color: #FAF9F6;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ff6c2f !important;
+            text-decoration: underline;
+        }
+
+        /* Contact page specific styles */
+        .contact-info {
+            margin-top: 50px;
+        }
+
+        .contact-item {
+            margin-bottom: 30px;
+        }
+
+        .contact-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: normal;
+            color: #aaa;
+        }
+
+        .contact-item p, .contact-item a {
+            font-size: 28px;
+            margin: 0;
+            color: #FAF9F6;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #ff6c2f;
+        }
+		
+    </style>
+</head>
+<body>
+    <header>
+        <h1>COOPER BOWMAN</h1> 
+    </header>
+    
+    <header>
+        <h1>
+            <span class="subtext">SINCE 2022</span>
+        </h1>
+    </header>
+    
+    <div class="container">
+        <div class="left-column">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">PORTFOLIO</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html" style="color: #ff6c2f;">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="right-column">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>EMAIL</h3>
+                    <a href="mailto:cooperbowmanart@gmail.com">cooperbowmanart@gmail.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>SOCIAL</h3>
+                    <p>
+                        <a href="https://www.instagram.com/cooperbowmandesign/" target="_blank">Instagram</a> / 
+                        <a href="https://x.com/cooperbowman_" target="_blank">Twitter</a> / 
+                        <a href="https://www.behance.net/cooperbowman_" target="_blank">Behance</a>
+                    </p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>BASED IN</h3>
+                    <p>Indiana, USA</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>AVAILABILITY</h3>
+                    <p>Currently available for freelance projects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
