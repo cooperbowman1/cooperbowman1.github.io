@@ -111,6 +111,8 @@ nav a:hover { text-decoration: underline; }
     <p>WEBSITE DESIGNED AND CREATED BY COOPER BOWMAN / EST. 2022 /	IN HONOR OF TIM BOWMAN 1958-2023</p>
 </footer>
 	
+	
+	
 	<script>
 // --- Image randomization code ---
 document.addEventListener('DOMContentLoaded', function() {
@@ -142,6 +144,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 	
 </body>
+	
+	
 <script>
 // --- Modal zoom code ---
 const modal = document.getElementById('image-modal');
@@ -181,6 +185,21 @@ modalImage.addEventListener('mouseleave', () => {
     modalImage.style.transformOrigin = 'center center';
   }
 });
+	
+	// Touch optimization for mobile
+document.addEventListener('touchstart', function() {}, {passive: true});
+
+// Better touch handling for modal
+modalImage.addEventListener('touchmove', function(e) {
+    if (isZoomEnabled && e.touches.length === 1) {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const r = modalImage.getBoundingClientRect();
+        const xPercent = ((touch.clientX - r.left) / r.width) * 100;
+        const yPercent = ((touch.clientY - r.top) / r.height) * 100;
+        modalImage.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+    }
+}, {passive: false});
 
 </script>
 </html>
