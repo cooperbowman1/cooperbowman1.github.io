@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="logo\COOPERBOWMAN_LOGO_2.svg" type="image/svg+xml">
+	<link rel="alternate icon" href="logo\COOPERBOWMAN_LOGO_2.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
+	<link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px) and (max-width: 1180px)">
+	<link rel="stylesheet" href="css/widescreen.css" media="(min-width: 2560px)">
+	<title>COOPER BOWMAN ☺︎</title>
+	<style>
+
+	html {
+	    overflow: -moz-scrollbars-none;
+	}
+
+	html::-webkit-scrollbar {
+	    width: 0 !important;
+	    display: none !important;
+	}
+
+	* {
+	    scrollbar-width: none !important;
+	    -ms-overflow-style: none !important;
+	}
+
+	*::-webkit-scrollbar {
+	    display: none !important;
+	}
+
+        /* Default link style: white text, no underline */
+        nav a {
+  			position: relative;
+  			color: #FAF9F6;                  /* always white text */
+  			text-decoration: none;
+        }
+
+        /* Hover effect: orange text with underline */
+nav a:hover { text-decoration: underline; }
+
+		/* === Desktop footer (mobile keeps its own bottom row, untouched) === */
+		.desktop-footer { display: none; }
+
+        @media (min-width: 768px) {
+            /* hide the mobile-era bottom pieces on desktop */
+            .social-container,
+            .COOPER-BOWMAN-LOGO { display: none; }
+            footer { display: none; }
+            .region-indicator { display: none !important; }
+
+            /* the new desktop footer bar */
+            .desktop-footer {
+                display: block;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                padding: 10px 35px 18px;
+                box-sizing: border-box;
+                z-index: 100;
+            }
+
+            .desktop-footer-credit {
+                margin: 0 0 12px 0;
+                padding-top: 12px;
+                border-top: 1px solid #333;
+                text-align: center;
+                font-size: 14px;
+                letter-spacing: -0.25px;
+                color: #EEEEEE;
+            }
+
+            .desktop-footer-cluster {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .desktop-footer-left {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .desktop-social {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+            }
+
+            .desktop-social .social-icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            .desktop-region {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                font-size: 13px;
+                color: #999999;
+                letter-spacing: 0.5px;
+            }
+
+            .region-flag-svg {
+                height: 14px;
+                width: auto;
+                display: block;
+            }
+
+            .desktop-logo img {
+                height: 80px;
+                width: auto;
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>COOPER BOWMAN</h1> 
+    </header>
+	
+<header>
+    <h1>
+<span class="subtext">
+    <span class="sub-role" style="display:none;">GRAPHIC DESIGNER</span>
+    <span class="sub-line" style="display:none;"></span>
+    <span class="sub-since">SINCE 2022</span>
+</span>
+    </h1>
+</header>
+	
+    <div class="container">
+        <div class="left-column">
+<nav>
+  <ul class="main-nav">
+    <li class="dropdown">
+      <span class="dropdown-toggle">PORTFOLIO</span>
+      <ul class="dropdown-menu">
+        <li><a href="graphic-design.html">Graphic Design</a></li>
+        <li><a href="monument-design.html">Monument Design</a></li>
+        <!-- <li><a href="stickers.html">Stickers</a></li> -->
+      </ul>
+    </li>
+<!-- <li class="dropdown">
+  <a href="pages.html" class="dropdown-toggle">PAGES</a> 
+  <ul class="dropdown-menu" id="blog-nav-menu">
+  </ul>
+</li> -->
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+</nav>
+        </div>
+<div class="right-column">
+    <div class="projects-container">
+        <div class="projects-grid" id="home-projects"></div>
+    </div>
+
+<a href="https://www.etsy.com/shop/cooperbowmandesign" target="_blank" class="shop-banner" style="display:none;">
+    <span class="shop-banner-text">
+        <span class="shop-banner-title">COOPER BOWMAN STORE</span>
+        <span class="shop-banner-sub">PRINTS &amp; STICKERS AVAILABLE NOW →</span>
+    </span>
+    <img src="logo\COOPERBOWMAN_LOGO.svg" alt="Cooper Bowman logo" class="shop-banner-logo">
+</a>
+</div>
+
+    </div>
+	
+<footer>
+    <p>WEBSITE DESIGNED AND CREATED BY COOPER BOWMAN — IN MEMORY OF TIM BOWMAN 1958-2023</p>
+</footer>
+
+<div class="mobile-bottom-row">
+    <div class="social-container">
+        <a href="https://www.instagram.com/cooperbowmandesign/" target="_blank"><img src="images/INSTAGRAM logo.svg" alt="Instagram" class="social-icon"></a>
+        <a href="https://x.com/cooperbowman_" target="_blank"><img src="images/X logo.svg" alt="X" class="social-icon"></a>
+        <a href="https://www.behance.net/cooperbowman_" target="_blank"><img src="images/Behance logo.svg" alt="Behance" class="social-icon"></a>
+        <a href="https://www.etsy.com/shop/cooperbowmandesign" target="_blank"><img src="images/ETSY logo.svg" alt="Etsy" class="social-icon"></a>
+    </div>
+
+    <div class="COOPER-BOWMAN-LOGO">
+        <a href="https://www.etsy.com/shop/cooperbowmandesign" target="_blank">
+            <img src="logo\COOPERBOWMAN_LOGO.svg" alt="COOPER BOWMAN LOGO">
+        </a>
+    </div>
+
+    <div class="region-indicator" style="display:none;">
+        <span class="region-flag">🇺🇸</span>
+        <span class="region-text">EN | USA</span>
+    </div>
+</div>
+
+<!-- Desktop-only footer (hidden on mobile) -->
+<div class="desktop-footer">
+    <p class="desktop-footer-credit">WEBSITE DESIGNED AND CREATED BY COOPER BOWMAN — IN MEMORY OF TIM BOWMAN 1958-2023</p>
+
+    <div class="desktop-footer-cluster">
+        <div class="desktop-footer-left">
+            <div class="desktop-social">
+                <a href="https://www.instagram.com/cooperbowmandesign/" target="_blank"><img src="images/INSTAGRAM logo.svg" alt="Instagram" class="social-icon"></a>
+                <a href="https://x.com/cooperbowman_" target="_blank"><img src="images/X logo.svg" alt="X" class="social-icon"></a>
+                <a href="https://www.behance.net/cooperbowman_" target="_blank"><img src="images/Behance logo.svg" alt="Behance" class="social-icon"></a>
+                <a href="https://www.etsy.com/shop/cooperbowmandesign" target="_blank"><img src="images/ETSY logo.svg" alt="Etsy" class="social-icon"></a>
+            </div>
+            <div class="desktop-region">
+                <img src="images/indianaflag.svg" alt="Indiana" class="region-flag-svg">
+                <img src="images/usaflag.svg" alt="USA" class="region-flag-svg">
+                <span>EN | USA</span>
+            </div>
+        </div>
+
+        <a href="https://www.etsy.com/shop/cooperbowmandesign" target="_blank" class="desktop-logo">
+            <img src="logo\COOPERBOWMAN_LOGO.svg" alt="COOPER BOWMAN LOGO">
+        </a>
+    </div>
+</div>
+	
+	
+	<script>
+/** Master project list (easy to add to later) */
+const PROJECTS = [
+  {
+    title: "The Rodeo© LookBook Collage", 
+    description: "Magazine Lookbook collage made in collaboration with THE RODEO©",
+    href: "the-rodeo-lookbook-collage.html",
+    img: "images/project1-thumb.jpg",
+    alt: "THE RODEO© LOOKBOOK COLLAGE",
+    category: "Graphic Design"
+  },
+  {
+    title: "Digital Collages",
+    description: "Mixed-Media Digital Collages",
+    href: "digital-collage.html",
+    img: `images/image${Math.floor(Math.random() * 11) + 1}.jpg`,
+    alt: "Digital Collages",
+    category: "Graphic Design"
+  },
+
+  /* ====== TODO: replace the placeholder links/thumbnails below with the real ones ====== */
+/*  {
+    title: "Veterans Memorial Park",
+    description: "Veterans Memorial Park in Crawfordsville Indiana",
+    href: "veterans-memorial-park.html",    // <-- was pointing to a sticker page; update to the real page
+    img: "images/veterans-park-thumb.jpg",  // <-- swap to a real thumbnail when ready
+    alt: "Veterans Memorial Park",
+    category: "Monument Design"
+  },
+  {
+    title: "Montgomery County Courthouse", 
+    description: "Crawfordsville courthouse project",
+    href: "montgomery-county-courthouse.html", // <-- update to your actual page if different
+    img: "images/courthouse-thumb.jpg",        // <-- swap to a real thumbnail when ready
+    alt: "Montgomery County Courthouse",
+    category: "Monument Design"
+  }*/
+];
+
+/* Fisher–Yates shuffle */
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+/* Render the tiles in the same markup/style you use on category pages */
+function renderHomeProjects(projects) {
+  const grid = document.getElementById('home-projects');
+  if (!grid) return;
+
+  // Shuffle for random order each load
+  const shuffled = shuffle([...projects]);
+
+  // Build tile markup
+  grid.innerHTML = shuffled.map(p => `
+    <div class="project-tile">
+      <a class="project-link" href="${p.href}">
+        <div class="project-image">
+          <img src="${p.img}" alt="${p.alt || p.title}">
+        </div>
+        <div class="project-info">
+          <h3>${p.title}</h3>
+          <p>${p.description || p.category || ""}</p>
+        </div>
+      </a>
+    </div>
+  `).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderHomeProjects(PROJECTS);
+  
+  // Set random collage image for Digital Collages project
+  const randomNum = Math.floor(Math.random() * 11) + 1;
+  const collageImages = document.querySelectorAll('#home-projects img[src="images/PLAYBOICARTI.jpg"]');
+  collageImages.forEach(img => {
+    img.src = `images/image${randomNum}.jpg`;
+  });
+});
+		
+// Mobile dropdown toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+    
+    dropdownToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('active');
+        }
+    });
+});
+		
+</script>
+
+
+</body>
+	
+</html>

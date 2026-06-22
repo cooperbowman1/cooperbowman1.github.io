@@ -1,0 +1,164 @@
+/* ========================================
+   WIDESCREEN OPTIMIZATIONS
+   For displays 1440px and wider
+   ======================================== */
+
+/* === 1. TYPOGRAPHY SCALING === */
+body {
+    font-size: 18px; /* up from 16px */
+}
+
+header h1 {
+    font-size: 52px; /* up from 48px */
+}
+
+nav ul li {
+    font-size: 22px; /* up from 20px */
+}
+
+/* === 2. GRID EXPANSION === */
+/* Homepage project grid - 5 columns on ultra-wide */
+#home-projects.projects-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    max-width: 1800px;
+}
+
+/* Section project grids - 5 columns */
+.projects-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    max-width: 1800px;
+}
+
+/* Image tile grids - 4 columns */
+.image-tiles {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* === 3. CONTAINER & TEXT MAX-WIDTHS === */
+/* Keep text-heavy pages readable */
+.about-content,
+.pages-list,
+.contact-info,
+.post-content {
+    max-width: 1200px;
+}
+
+/* Main container breathing room */
+.container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+/* === 4. FIXED ELEMENTS REPOSITIONING === */
+/* Move logo closer to content */
+.COOPER-BOWMAN-LOGO {
+    right: 60px;
+    bottom: 30px;
+}
+
+.COOPER-BOWMAN-LOGO img {
+    height: 90px; /* slightly larger */
+}
+
+/* Move social icons closer to content */
+.social-container {
+    left: 60px;
+    bottom: 30px;
+}
+
+.social-icon {
+    width: 32px; /* slightly larger */
+    height: 32px;
+}
+
+/* === 5. SPACING IMPROVEMENTS === */
+/* Add more breathing room between sections */
+.project-section {
+    margin-bottom: 100px;
+    max-width: 1600px;
+}
+
+/* Improve right column spacing */
+.right-column {
+    padding-left: 60px;
+}
+
+/* === 6. PROJECT TILES === */
+.project-info h3 {
+    font-size: 18px; /* up from 16px */
+}
+
+.project-info p {
+    font-size: 16px; /* up from 15px */
+}
+
+/* === 7. PAGE-SPECIFIC OPTIMIZATIONS === */
+/* About page profile image */
+.profile-image {
+    width: 450px; /* up from 400px */
+    height: 675px; /* maintain aspect ratio */
+}
+
+/* Page titles */
+.page-title {
+    font-size: 46px; /* up from 42px */
+}
+
+.post-title {
+    font-size: 46px; /* up from 42px */
+}
+
+/* Description text */
+.description {
+    font-size: 20px; /* up from default */
+    max-width: 900px;
+}
+
+/* === 8. NAVIGATION === */
+/* Slightly more space for nav */
+.left-column {
+    flex: 0 0 18%; /* up from 15% */
+}
+
+/* === 9. FOOTER === */
+footer {
+    font-size: 15px; /* up from 14px */
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+/* === 10. MODAL/LIGHTBOX === */
+/* Ensure modals look good on large screens */
+.modal img {
+    max-width: 85%;
+    max-height: 85%;
+}
+
+/* === ULTRA-WIDE SPECIFIC (2000px+) === */
+@media (min-width: 2000px) {
+    /* Expand to 6 columns on truly massive screens */
+    #home-projects.projects-grid,
+    .projects-grid {
+        grid-template-columns: repeat(6, 1fr);
+        max-width: 2200px;
+    }
+    
+    .image-tiles {
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 2200px;
+    }
+    
+    body {
+        font-size: 19px;
+    }
+    
+    .container {
+        max-width: 2300px;
+    }
+}

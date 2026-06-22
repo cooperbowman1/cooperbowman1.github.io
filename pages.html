@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
+	<link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px) and (max-width: 1180px)">
+	<link rel="stylesheet" href="css/widescreen.css" media="(min-width: 2560px)">
+	<title>Pages - Cooper Bowman</title>
+	<style>
+        /* Reuse your existing styles */
+        body {
+            margin: 0px;
+            font-size: 16px;
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: black;
+            color: #EEEEEE;
+        }
+
+/* Header Styles */
+header {
+    width: 100%;
+	max-width: 100vw;
+    padding: 20px 0;
+    position: relative;
+}
+
+header h1 {
+	font-family: 'Helvetica Light', sans-serif;
+    font-size: 48px;
+	letter-spacing: -2px;
+	font-weight: 500;
+    margin: 0;
+	margin-left: 15px;
+	text-align: left;
+}
+
+header h1 .subtext {
+	font-family: 'Helvetica Regular', sans-serif;
+	color: #999999;
+    display: block;
+    font-size: 16px;
+	letter-spacing: +.5px;
+    font-weight: normal;
+    margin-top: -40px;
+	margin-left: +5px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+    align-items: center;
+	margin-top: -60px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-column {
+    flex: 1;
+    padding-left: 100px;
+}
+
+nav ul li {
+    font-size: 25px;
+    letter-spacing: -.5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+nav a {
+    position: relative;
+    color: #FAF9F6;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #999999 !important;
+    text-decoration: underline;
+}
+
+.dropdown > .dropdown-toggle { 
+    cursor: pointer; 
+}
+
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    margin: 0.25rem 0 0 1rem;
+    padding: 0;
+    position: static;
+    background: transparent;
+    border: 0;
+}
+
+.dropdown-menu li { 
+    margin: 0 0 0.25rem 0; 
+}
+
+.dropdown-menu a {
+    display: block;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+.dropdown:hover > .dropdown-menu { 
+    display: block; 
+}
+
+        /* Pages accordion styles */
+        .pages-list {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .page-item {
+            border-bottom: 1px solid #333;
+            margin-bottom: 0;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .page-header:hover {
+            color: #999999;
+        }
+
+        .page-title {
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            margin: 0;
+        }
+
+        .page-date {
+            font-size: 14px;
+            color: #999999;
+            margin-left: 0px;
+        }
+
+        .page-arrow {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+            color: #999999;
+        }
+
+        .page-item.active .page-arrow {
+            transform: rotate(180deg);
+        }
+
+        .page-preview {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 0;
+        }
+
+        .page-item.active .page-preview {
+            max-height: 500px;
+            padding: 0 0 20px 0;
+        }
+
+        .page-excerpt {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #CCCCCC;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            color: #999999;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #EEEEEE;
+            text-decoration: underline;
+        }
+
+        .page-title-text {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>COOPER BOWMAN</h1> 
+    </header>
+    
+    <header>
+        <h1>
+            <span class="subtext">SINCE 2022</span>
+        </h1>
+    </header>
+    
+    <div class="container">
+        <div class="left-column">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">PORTFOLIO</a></li>
+                    <li><a href="pages.html" style="color: #999999;">PAGES</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="right-column">
+            <div class="pages-list">
+                <!-- Page Item 1 -->
+<div class="page-item">
+    <div class="page-header">
+        <div class="page-title-text">
+            <h3 class="page-title">PLACEHOLDER</h3>
+            <span class="page-date">PLACEHOLDER DATE</span>
+        </div>
+        <span class="page-arrow">▼</span>
+    </div>
+    <div class="page-preview">
+        <p class="page-excerpt">Blank text to test and placehold for future text and entries.</p>
+        <a href="page-post-3.html" class="read-more">Read Full Post →</a>
+    </div>
+</div>
+
+                <!-- Page Item 2 -->
+<div class="page-item">
+    <div class="page-header">
+        <div class="page-title-text">
+            <h3 class="page-title">PLACEHOLDER</h3>
+            <span class="page-date">PLACEHOLDER DATE</span>
+        </div>
+        <span class="page-arrow">▼</span>
+    </div>
+    <div class="page-preview">
+        <p class="page-excerpt">Blank text to test and placehold for future text and entries.</p>
+        <a href="page-post-2.html" class="read-more">Read Full Post →</a>
+    </div>
+</div>
+
+                <!-- Page Item 3 -->
+<div class="page-item">
+    <div class="page-header">
+        <div class="page-title-text">
+            <h3 class="page-title">2026 & Design</h3>
+            <span class="page-date">JANUARY 19, 2026</span>
+        </div>
+        <span class="page-arrow">▼</span>
+    </div>
+    <div class="page-preview">
+        <p class="page-excerpt">Taking time to research and expand my mind to creating high quality prints.</p>
+        <a href="page-post-1.html" class="read-more">Read Full Post →</a>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-container">
+        <a href="https://www.instagram.com/cooperbowmandesign/" target="_blank">
+            <img src="images/INSTAGRAM logo.svg" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://x.com/cooperbowman_" target="_blank">
+            <img src="images/X logo.svg" alt="X" class="social-icon">
+        </a>
+        <a href="https://www.behance.net/cooperbowman_" target="_blank">
+            <img src="images/Behance logo.svg" alt="Behance" class="social-icon">
+        </a>
+    </div>
+
+    <!-- Cooper Bowman Logo -->
+    <div class="COOPER-BOWMAN-LOGO">
+        <img src="logo/COOPERBOWMAN_LOGO.svg" alt="Cooper Bowman Logo">
+    </div>
+
+	    <script>
+        // Accordion functionality
+        document.querySelectorAll('.page-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const pageItem = this.parentElement;
+                const isActive = pageItem.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.page-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    pageItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+	
+</body>
+</html>

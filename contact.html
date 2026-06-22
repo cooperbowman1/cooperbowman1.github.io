@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
+	<link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px) and (max-width: 1180px)">
+	<link rel="stylesheet" href="css/widescreen.css" media="(min-width: 2560px)">
+	<title>Contact</title>
+	<style>
+        /* === Global (all screen sizes) === */
+        body {
+            margin: 0;
+            font-size: 16px;
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: black;
+            color: #EEEEEE;
+        }
+
+        nav a {
+            position: relative;
+            color: #FAF9F6;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #999999 !important;
+            text-decoration: underline;
+        }
+
+        .contact-item h3 {
+            color: #aaa;
+            font-weight: normal;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: #FAF9F6;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        .contact-item a:hover {
+            color: #999999;
+        }
+
+        /* === Desktop / tablet only — mobile is handled by mobile.css === */
+        @media (min-width: 768px) {
+            header {
+                width: 100%;
+                max-width: 100vw;
+                padding: 20px 0;
+                position: relative;
+            }
+
+            header h1 {
+                font-family: 'Helvetica Light', sans-serif;
+                font-size: 48px;
+                letter-spacing: -2px;
+                font-weight: 500;
+                margin: 0;
+                margin-left: 15px;
+                text-align: left;
+            }
+
+            header h1 .subtext {
+                font-family: 'Helvetica Regular', sans-serif;
+                color: #999999;
+                display: block;
+                font-size: 16px;
+                letter-spacing: .5px;
+                font-weight: normal;
+                margin-top: -40px;
+                margin-left: 5px;
+            }
+
+            .container {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+                min-height: calc(100vh - 200px);
+                align-items: center;
+                margin-top: -60px;
+            }
+
+            .left-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .right-column {
+                flex: 1;
+                display: flex;
+                padding-left: 100px;
+            }
+
+            nav ul li {
+                font-size: 25px;
+                letter-spacing: -.5px;
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+
+            .contact-info {
+                margin-top: 50px;
+            }
+
+            .contact-item {
+                margin-bottom: 30px;
+            }
+
+            .contact-item h3 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .contact-item p,
+            .contact-item a {
+                font-size: 28px;
+            }
+
+            /* Dropdown (desktop) */
+            .main-nav { list-style: none; margin: 0; padding: 0; }
+            .main-nav > li { position: relative; margin: 0 0 0.5rem 0; }
+            .dropdown > .dropdown-toggle { cursor: pointer; }
+            .dropdown-menu {
+                display: none;
+                list-style: none;
+                margin: 0.25rem 0 0 1rem;
+                padding: 0;
+                position: static;
+                background: transparent;
+                border: 0;
+            }
+            .dropdown-menu li { margin: 0 0 0.25rem 0; }
+            .dropdown-menu a { display: block; font-size: 21px; line-height: 1.5; }
+            .dropdown:hover > .dropdown-menu { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>COOPER BOWMAN</h1> 
+    </header>
+    
+    <header>
+        <h1>
+            <span class="subtext">SINCE 2022</span>
+        </h1>
+    </header>
+    
+    <div class="container">
+        <div class="left-column">
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">PORTFOLIO</a></li>
+					<!-- <li><a href="pages.html">PAGES</a></li> -->
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html" style="color: #999999;">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="right-column">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>EMAIL</h3>
+                    <a href="mailto:cooperbowmanart@gmail.com">cooperbowmanart@gmail.com</a>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>SOCIAL</h3>
+                    <p>
+                        <a href="https://www.instagram.com/cooperbowmandesign/" target="_blank">Instagram</a> / 
+                        <a href="https://x.com/cooperbowman_" target="_blank">X</a> / 
+                        <a href="https://www.behance.net/cooperbowman_" target="_blank">Behance</a>
+                    </p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>BASED IN</h3>
+                    <p>Indiana, USA</p>
+                </div>
+                
+                <div class="contact-item">
+                    <h3>AVAILABILITY</h3>
+                    <p>Currently available for freelance projects</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
